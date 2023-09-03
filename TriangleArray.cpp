@@ -34,13 +34,9 @@ int * TrArrInput(size_t * Arr_size, FILE *filename)
 
     Array = (int *) calloc(arr_cells, SIZEOFINT);
 
-    printf("%p", Array);
-
-
     for (size_t i = 0; i < arr_cells; i++)
     {
         fscanf(filename, "%d", &Array[i]);
-        printf("%d ", Array[i]);
     }
 
     return Array;
@@ -51,7 +47,6 @@ void TrArrOutp(const int * Array, const size_t size)
 {
     size_t row_lenght = 1;
     size_t i = 0;
-    printf("\n");
     for (size_t row = 0; row < size; row++)
     {
         printf("%d:", row);
